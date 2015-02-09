@@ -1,8 +1,66 @@
 # order
 returns a permutation which rearranges input array
 
-## order()
+## order(arr, [compareFunction])
 
+The exported function requires as its first parameter the array for which the indices in specified order should be obtained. The optional parameter `compareFunction` specifies a function defining the sort order. If not supplied, the returned permutation indices of the  array sort its elements in increasing order. To sort more complicated objects than numeric primitives, a custom `compareFunction` has to be supplied. This function compares elements `a` and `b` according to the following rules:
+- If `compareFunction(a, b)` is less than 0, a gets a lower index than b
+- If `compareFunction(a, b)` is greater than 0, b gets a lower index than a.
+
+Therefore, the standard compare function which sorts the elements in ascending order is equivalent to
+```
+function(a, b) {
+    if (a < b) {
+      return -1;
+    }
+    if (a > b) {
+      return 1;
+    }
+    return 0;
+  };
+```
+
+### Examples
+
+#### Increasing Sequence:
+
+Code:
+```
+order([1, 2, 3, 4])
+```
+
+Output:
+```
+[0, 1, 2, 3]
+```
+
+#### Decreasing Sequence:
+
+Code:
+```
+order([4, 3, 2, 1])
+```
+
+Output:
+```
+[3, 2, 1, 0]
+```
+
+#### Custom Compare Function:
+
+Code:
+```
+var arr = [{name:"Tom", age: 28}, {name:"Lisa",age:23},{name:"Bill", age: 65}]
+// order decreasing with age:
+order(arr, function(a,b){
+  return b.age - a.age;
+});
+```
+
+Output:
+```
+[2, 0, 1]
+```
 ## Unit Tests
 
 Run tests via the command `npm test`
