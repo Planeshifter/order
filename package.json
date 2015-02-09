@@ -1,0 +1,32 @@
+{
+  "name": "order",
+  "version": "0.1.0",
+  "description": "returns a permutation which rearranges input array ",
+  "main": "lib/order.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test/test.coffee --compilers coffee:coffee-script/register",
+    "prepublish": "coffee -o lib -c src/*.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Planeshifter/order.git"
+  },
+  "keywords": [
+    "permutation",
+    "sorting",
+    "ordering"
+  ],
+  "author": "Philipp Burckhardt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Planeshifter/order/issues"
+  },
+  "homepage": "https://github.com/Planeshifter/order",
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "coffee-script": "^1.9.0"
+  }
+}
