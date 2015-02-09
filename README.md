@@ -1,5 +1,22 @@
+[![NPM version](https://badge.fury.io/js/order-permutation.svg)](http://badge.fury.io/js/order-permutation)
+[![Build Status](https://travis-ci.org/Planeshifter/order-permutation.svg)](https://travis-ci.org/Planeshifter/order-permutation)
+
 # order
-returns a permutation which rearranges input array
+returns a permutation which rearranges input array. Implemented
+using merge sort algorithm, yielding average performance of O(n log n).
+
+## Installation
+
+Install from npm:
+
+```
+npm install order-permutation
+```
+Use as follows:
+
+```
+var order = require('order-permutation');
+```
 
 ## order(arr, [compareFunction])
 
