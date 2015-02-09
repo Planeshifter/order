@@ -61,6 +61,22 @@ Output:
 ```
 [2, 0, 1]
 ```
+
+### Obtaining the Sorted Array
+
+To obtain the actual sorted array, one can use the `at()` function of the *lodash* library, like so:
+
+```
+var arr = [5, 1, 3, 2];
+var indices = order(arr);
+_.at(arr, indices)
+```
+
+Output:
+```
+[ 1, 2, 3, 5 ]
+```  
+
 ## Unit Tests
 
 Run tests via the command `npm test`
