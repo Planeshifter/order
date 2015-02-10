@@ -1,5 +1,5 @@
 [![NPM version](https://badge.fury.io/js/order-permutation.svg)](http://badge.fury.io/js/order-permutation)
-[![Build Status](https://travis-ci.org/Planeshifter/order-permutation.svg)](https://travis-ci.org/Planeshifter/order-permutation)
+[![Build Status](https://travis-ci.org/Planeshifter/order.svg)](https://travis-ci.org/Planeshifter/order)
 
 # order
 returns a permutation which rearranges input array. Implemented
