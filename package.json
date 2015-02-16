@@ -1,6 +1,6 @@
 {
   "name": "order-permutation",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "returns a permutation which rearranges input array",
   "main": "lib/order.js",
   "directories": {
