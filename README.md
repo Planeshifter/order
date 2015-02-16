@@ -1,6 +1,5 @@
-[![NPM version](https://badge.fury.io/js/order-permutation.svg)](http://badge.fury.io/js/order-permutation)
-[![Build Status](https://travis-ci.org/Planeshifter/order.svg)](https://travis-ci.org/Planeshifter/order)
-https://david-dm.org/Planeshifter/order.svg
+[![NPM version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
 [![Dependencies][dependencies-image]][dependencies-url]
 
 
@@ -105,6 +104,12 @@ Run tests via the command `npm test`
 ## License
 
 [MIT license](http://opensource.org/licenses/MIT). 
+
+[npm-image]: https://badge.fury.io/js/order-permutation.svg
+[npm-url]: http://badge.fury.io/js/order-permutation
+
+[travis-image]: https://travis-ci.org/Planeshifter/order.svg
+[travis-url]: https://travis-ci.org/Planeshifter/order
 
 [dependencies-image]: http://img.shields.io/david/Planeshifter/order.svg
 [dependencies-url]: https://david-dm.org/Planeshifter/order
