@@ -1,5 +1,8 @@
 [![NPM version](https://badge.fury.io/js/order-permutation.svg)](http://badge.fury.io/js/order-permutation)
 [![Build Status](https://travis-ci.org/Planeshifter/order.svg)](https://travis-ci.org/Planeshifter/order)
+https://david-dm.org/Planeshifter/order.svg
+[![Dependencies][dependencies-image]][dependencies-url]
+
 
 # order
 returns a permutation which rearranges input array. Implemented
@@ -97,3 +100,12 @@ Output:
 ## Unit Tests
 
 Run tests via the command `npm test`
+
+---
+## License
+
+[MIT license](http://opensource.org/licenses/MIT). 
+
+[dependencies-image]: http://img.shields.io/david/Planeshifter/order.svg
+[dependencies-url]: https://david-dm.org/Planeshifter/order
+
