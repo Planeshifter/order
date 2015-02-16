@@ -7,7 +7,7 @@ merge = (left, right) ->
   li = 0
   ri = 0
   while li < left.length and ri < right.length
-    if merge.comparator(left[li], right[ri]) < 0
+    if merge.comparator(left[li].data, right[ri].data) < 0
       result.push left[li++]
     else
       result.push right[ri++]
@@ -17,10 +17,12 @@ merge = (left, right) ->
 standard compare function, attached as property to prevent passing it around
 all the time.
 ###
-merge.comparator = (a, b) ->
+
+defaultComparator = (a, b) ->
   if a < b then return -1
   if a > b then return 1
   return 0
+merge.comparator = defaultComparator
 
 ###
 mergeSort: main merge sort function which splits arrays into one-element
@@ -40,16 +42,20 @@ Parameters:
 @compareFunction: optional comparator function, standard is to sort elements
 in increasing order
 ###
-order = (arr, compareFunction) ->
+order = (inputArr, compareFunction) ->
   if typeof(compareFunction) == "function"
     merge.comparator = compareFunction
 
-  arr = arr.map( (e, i) ->
-    e = Object(e) # convert elements from primitive to objects if not already
-    e.index = i
-    return e
+  arr = []
+  arr = inputArr.map( (e, i) ->
+    o = {}
+    o.data = Object(e) # convert elements from primitive to objects if not already
+    o.index = i
+    return o
   )
   arr = mergeSort(arr)
+  # reset comparator function
+  merge.comparator = defaultComparator
   return arr.map( (e) -> e.index )
 
 module.exports = exports = order
