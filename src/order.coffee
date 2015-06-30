@@ -7,10 +7,10 @@ merge = (left, right) ->
   li = 0
   ri = 0
   while li < left.length and ri < right.length
-    if merge.comparator(left[li].data, right[ri].data) < 0
-      result.push left[li++]
-    else
+    if merge.comparator(left[li], right[ri]) > 0
       result.push right[ri++]
+    else
+      result.push left[li++]
   return result.concat( left.slice(li) ).concat( right.slice(ri) )
 
 ###
@@ -48,14 +48,18 @@ order = (inputArr, compareFunction) ->
 
   arr = []
   arr = inputArr.map( (e, i) ->
-    o = {}
-    o.data = Object(e) # convert elements from primitive to objects if not already
-    o.index = i
-    return o
+    e = Object( e )
+    e.index$679 = i
+    return e
   )
   arr = mergeSort(arr)
+
   # reset comparator function
   merge.comparator = defaultComparator
-  return arr.map( (e) -> e.index )
+  return arr.map( (e) ->
+    index = e.index$679
+    delete e.inde$x679
+    return index
+  )
 
 module.exports = exports = order
