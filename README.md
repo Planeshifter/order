@@ -4,7 +4,8 @@
 
 
 # order
-returns a permutation which rearranges input array. Implemented
+
+Returns a permutation which rearranges input array. Implemented
 using merge sort algorithm, yielding average performance of O(n log n).
 
 ## Installation
@@ -17,10 +18,10 @@ npm install order-permutation
 Use as follows:
 
 ``` javascript
-var order = require('order-permutation');
+var order = require( 'order-permutation' );
 ```
 
-## order(arr, [compareFunction])
+## order( arr, \[compareFunction\] )
 
 The exported function requires as its first parameter the array for which the indices in specified order should be obtained. The optional parameter `compareFunction` specifies a function defining the sort order. If not supplied, the returned permutation indices of the  array sort its elements in increasing order. To sort more complicated objects than numeric primitives, a custom `compareFunction` has to be supplied. This function compares elements `a` and `b` according to the following rules:
 - If `compareFunction(a, b)` is less than 0, a gets a lower index than b

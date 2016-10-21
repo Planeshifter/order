@@ -54,12 +54,12 @@ order = (inputArr, compareFunction) ->
   )
   arr = mergeSort(arr)
 
-  # reset comparator function
+  # Reset comparator function:
   merge.comparator = defaultComparator
   return arr.map( (e) ->
     index = e.index$679
-    delete e.inde$x679
+    delete e.index$679
     return index
   )
 
-module.exports = exports = order
+module.exports = order
