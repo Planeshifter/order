@@ -5,8 +5,7 @@
 
 # order
 
-Returns a permutation which rearranges input array. Implemented
-using merge sort algorithm, yielding average performance of O(n log n).
+Returns a permutation which rearranges input array.
 
 ## Installation
 
