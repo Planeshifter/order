@@ -20,6 +20,10 @@
     "ordering"
   ],
   "author": "Philipp Burckhardt",
+  "contributors": [
+    "Philipp Burckhardt",
+    "Eugene Sharygin"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Planeshifter/order/issues"
